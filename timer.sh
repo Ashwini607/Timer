@@ -8,10 +8,14 @@
 
 # If you are interested in keeping all results then put >> before $4 instead of >
 
+<<<<<<< HEAD
 echo "If error is coming in running query then first check the format in which you have to keep the command to execute the query." 
 echo "I mean apart from executive bash file name, you have to mention somethings else for input of bash file."
 echo "I have mentioned it in comment and in "README.md" file of timer github repository  "
 
+=======
+# it will print number on terminal for updating the how many time query has executed.
+>>>>>>> b54367ba1913a9102eb143b29e35614f36829a6e
    for((i=0; i< $1; i++))
    do
     START=$(date +%s)
