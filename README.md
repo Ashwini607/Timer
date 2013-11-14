@@ -11,6 +11,13 @@ Executible file is "rsparql" but I have modified it to make more space for runni
 
 The modified file has saved with name of "rsparlmem" .
 
+for modification in file you will go to the following location in rsparql fiel present inside bin folder of Apache-Jena directory:
+
+# ---- Setup
+JVM_ARGS=${JVM_ARGS:--Xmx4096M}
+you will change it if your query has requirement of more Jena Virtual Machine space requirement. This change should be according to your computer machine not beyond their memory.
+
+
 So you would have to keep this file inside the bin folder of Apache-Jena directory .
 
 # How to run the timer bash file?
