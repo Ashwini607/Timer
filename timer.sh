@@ -8,6 +8,7 @@
 
 # If you are interested in keeping all results then put >> before $4 instead of >
 
+# it will print number on terminal for updating the how many time query has executed.
    for((i=0; i< $1; i++))
    do
     START=$(date +%s)
