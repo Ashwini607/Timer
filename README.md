@@ -1,6 +1,6 @@
-Use of timer bash file
+#Use of timer bash file
 - To do time analysis of SPARQL query on respective SPARQL end point of RDF triple store service.
-Some short of analysis are present in Analysis repository ()
+Some short of analysis are present in Analysis repository (https://github.com/Ashwini607/Analysis)
 
 
 
