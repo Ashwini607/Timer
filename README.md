@@ -17,7 +17,7 @@ So you would have to keep this file inside the bin folder of Apache-Jena directo
 
 It takes user input for number of times query will run, name of SPARQL endpoint service, query file name with path, result storing file, and time saving file respectively,
 
-for example,  Example: ./timer.sh 2 [http://www.ebi.ac.uk/rdf/services/chembl/sparql]() /Users/ashwini/github/ChEMBL-RDF-Queries/federatedAndOthersEndpointQueries/actDiseaseChUp_1.rq 1.txt 2.txt
+for example,  Example: ./timer.sh 2 http://www.ebi.ac.uk/rdf/services/chembl/sparql /Users/ashwini/github/ChEMBL-RDF-Queries/federatedAndOthersEndpointQueries/actDiseaseChUp_1.rq 1.txt 2.txt
 
 Here it is running for  "actDiseaseChUp_1.rq" query file, 2 times on ChEMBL SPARQL endpoint. Result and timing are getting save in 1.txt and 2.txt respectively.
 
