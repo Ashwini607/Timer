@@ -5,7 +5,8 @@ Some short of analysis are present in Analysis repository (https://github.com/As
 
 # How does the timer bash file work?
 
-It uses the Jena library to execute the SPAQRL query. You can download the Apache-Jena java package from http://jena.apache.org/download/index.html. 
+It uses the Jena library to execute the SPAQRL query. You can download the Apache-Jena java package from http://jena.apache.org/download/index.html.
+Our executable file is inside the bin folder.
 
 Executable file is "rsparql" but I have modified it to make more space for running query having larger number of results, because it was facing less space available problem in such queries. 
 
