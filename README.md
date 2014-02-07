@@ -1,33 +1,31 @@
 # Use of the timer bash file
 
-To do time analysis of SPARQL query on respective SPARQL endpoint service of RDF triple store.
-Some short of analysis are present in Analysis repository (https://github.com/Ashwini607/Analysis)
+To do a SPARQL query execution time analysis on the SPARQL endpoint service of a RDF triple store.
+I have done some analysis and are present in the [Analysis](https://github.com/Ashwini607/Analysis) repository.
 
 # How does the timer bash file work?
 
 It uses the Jena library to execute the SPAQRL query. You can download the Apache-Jena java package from http://jena.apache.org/download/index.html.
 Our executable file is inside the bin folder.
 
-Executable file is "rsparql" but I have modified it to make more space for running query having larger number of results, because it was facing less space available problem in such queries. 
+The executable file is "rsparql". But I have modified it to make more space for running a query having larger number of the results, otherwise such query does not execute. 
 
-The modified file has saved with name of "rsparlmem".
+The modified file has saved with the name "rsparlmem".
 
-For modification in file you will go to the following location in rsparql file present inside bin folder of Apache-Jena directory:
+For space modification in the file, you would have to go to the following location in rsparql file present inside the bin folder of the Apache-Jena directory:
 
  ---- Setup
 JVM_ARGS=${JVM_ARGS:--Xmx4096M}
 
-Here given space are 4096M that you can change. You will change it if your query has requirement of more Jena Virtual Machine space. This change should be according to your computer machine not beyond their memory.
-
-
-So you would have to keep this file inside the bin folder of Apache-Jena directory.
+Here, given space is 4096M that you can change as per space requirement for your query. If the mentioned space will be more then it is okay. Otherwise, an error will produce that you can handle by increasing the space. Makesure your computer have required space.
 
 # How to run the timer bash file?
 
-It takes user input for number of times query will run, name of SPARQL endpoint service, query file name with path, result storing file, and time saving file respectively.
+With a executable file command you would have to the following information:
+number of times a query will run, name of the SPARQL endpoint service, name of a query file with path, a file name to store the results, and a file name to save the calculated timing respectively.
 
 For example: ./timer.sh 2 http://www.ebi.ac.uk/rdf/services/chembl/sparql /Users/ashwini/github/ChEMBL-RDF-Queries/federatedAndOthersEndpointQueries/actDiseaseChUp_1.rq 1.txt 2.txt
 
-Here it is running for  "actDiseaseChUp_1.rq" query file, 2 times on ChEMBL SPARQL endpoint. Result and timing are getting saved in 1.txt and 2.txt respectively.
+Query file is "actDiseaseChUp_1.rq". running 2 times on ChEMBL SPARQL endpoint. The results and the calculated timing are getting saved in the file 1.txt and 2.txt respectively.
 
-These user inputs with execution file name go to $1, $2, $3, $4, and $5 variable and in order as I mentioned above. Result file save the last time run query not for all time so if you want to save results for each time just make a change in bash file by putting ">>" before $4 in place of ">". If you are not interested in result file then can remove the variable name from bash file and then you would not have to put that information in command line.
+The user inputs along with the execution file command, go to the $1, $2, $3, $4, and $5 variable. The variable names are in order. $1 is for the input name just after the executable file name and then $2, $3, $4,$5 respectively. The result file save the results that comes from last the time executuion of your query but not for all time, because saving the same results more than one time does not make sense. If you do not want the  result file, remove the variable name from the bash file and then you would not have to put that information in the command line.
